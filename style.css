@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 10px;
+  text-align:center;
+}
+body > div {
+  background:#ddd;
+}
+.middle {
+  width:400px; height:200px;
+  position:absolute;
+  margin-top:-25px;
+  z-index:-10;
+}
+.middle > h2 {
+  color:#ddd;
+	background:#444;
+	width:fit-content;
+	margin:-10px auto;
+}
+.middle div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:100px auto;
+  width:100px;
+}
+.middle div h2::before{
+	content:"";
+	position:absolute;
+	width:35px; height:10px;
+	background:gray;
+  border-radius:5px;
+  transform:rotate(-30deg);
+	bottom:47px; margin-left:1px
+}
+.left , .right {
+	width:250px; height:250px;
+  border-radius:50%;
+  margin:0 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left > div {
+  border-radius:50%;
+  width:150px; height:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:-3px 0.1px 10px 1px rgba(0,0,0,0.41) inset
+}
+.right > div {
+  border-radius:50%;
+  background:gray;
+	width:225px; height:225px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  transform:rotate(-30deg)
+}
+.left > div > div {
+  width:110px; height:30px;
+	background:#444;
+  position:absolute;
+	z-index:0;
+
+}
+.left > div > div:first-child {
+  transform:rotate(90deg);
+	box-shadow:-3px 4px 10px 1px rgba(0,0,0,0.91)
+}
+.left > div > .a , 
+.left > div > .b ,
+.left > div > .c ,
+.left > div > .d ,
+.left > div > .e {
+  background:#ddd;
+  position:absolute;
+	width:25px; height:25px;
+  z-index:1
+}
+.a {
+  margin:0 52.5px;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
+}
+.b {
+  margin:0 -52.5px;
+  clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+}
+.c {
+  margin:52.5px 0;
+  clip-path: polygon(100% 0%, 0% 0%, 50% 50%);
+}
+.d {
+  margin:-52.5px 0;
+  clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+}
+.e {
+  border-radius:50%
+}
+.right > div >div {
+  background:#ddd;
+	width:110px; height:42px;
+  margin:6px 0;
+	border-radius:50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px;
+	position:relative;
+}
+.right > div > div > div {
+  border-radius:50%;
+  background:red;
+  width:35px; height:35px;
+	box-shadow:-3px 4px 10px 1px rgba(0,0,0,0.91)
+}
+.right > div > div > .y {
+  background:green
+}
+.right > div > div > .x {
+  background:blue
+}
+.right > div > div:last-child > .B {
+  background:yellow;
+}
+.right > div > div::before {
+	position:absolute;
+	font-size:25px;
+	left:-30px;
+	color:white;
+}
+.right > div > div::after {
+	position:absolute;
+	font-size:25px;
+	right:-30px;
+	color:white;
+}
+.right > div > div:last-child::before{
+  content:"B"
+}
+.right > div > div:last-child::after{
+  content:"A"
+}
+.right > div > div:first-child::before{
+  content:"Y"
+}
+.right > div > div:first-child::after{
+  content:"X"
+}
